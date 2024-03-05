@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campo de Fútbol en 3D</title>
+    <script src="js/aframe.min.js"></script> 
+    <link rel="stylesheet" href="css/Estilos.css">
+</head>
+<body>
+    <div class="menu">
+        <header>
+            <h1>Gráficos 3D</h1>
+        </header>
+        <nav>
+            <a href="#">Fútbol </a>
+            <a href="#">Grafico2</a>
+            <a href="#">Grafico3</a>
+        </nav>
+    </div>
+  
+    <a-scene>
+        <!-- Cielo -->
+        <a-sky color="#87CEEB"></a-sky>
+
+        <!-- Campo -->
+        <a-plane rotation="-90 0 0" width="40" height="60" color="#3E8344"></a-plane>
+        <a-box position="0 0.001 0" rotation="0 0 0" width="25" height="0.01" depth="0.08" color="#F7F7F7"></a-box> <!-- linw Central -->
+        <a-box position="0 0.001 25" rotation="0 0 0" width="25.1" height="0.01" depth="0.08" color="#F7F7F7"></a-box> <!-- linea de meta -->
+        <a-box position="0 0.001 -25" rotation="0 0 0" width="25.1" height="0.01" depth="0.08" color="#F7F7F7"></a-box> <!-- linea de meta -->
+        <a-cylinder position="0 0.001 0" radius="1" height="0.0" color="#F7F7F7"></a-cylinder><!-- circulo central -->
+        <a-box position="12.5 0.001 0" rotation="0 90 0" width="50" height="0.01" depth="0.08" color="#F7F7F7"></a-box> <!-- línea lateral -->
+        <a-box position="-12.5 0.001 0" rotation="0 90 0" width="50" height="0.01" depth="0.08" color="#F7F7F7"></a-box> <!-- línea lateral -->
+    
+        <!-- Porterías -->
+        <!-- Portería 1 -->
+        <a-cylinder position="-2.5 0 25" radius="0.08" height="4" color="#F7F7F7"></a-cylinder> <!-- PALO 1 -->
+        <a-cylinder position="2.5 0 25" radius="0.08" height="4" color="#F7F7F7"></a-cylinder><!-- PALO 2 -->
+        <a-cylinder position="0 2.04 25" rotation="0 0 90" radius="0.08" height="5.2" color="#F7F7F7"></a-cylinder><!-- PALO arriba -->
+        <a-cylinder position="-2.5 0 27" radius="0.08" height="4" color="#F7F7F7"></a-cylinder> <!-- PALO 1 atras -->
+        <a-cylinder position="2.5 0 27" radius="0.08" height="4" color="#F7F7F7"></a-cylinder><!-- PALO 2 atras -->
+
+        <a-cylinder position="-2.5 2 26" rotation="90 0 0" radius="0.08" height="2" color="#F7F7F7"></a-cylinder> <!-- PALO 1 atras -->
+        <a-cylinder position="2.5 2 26" rotation="90 0  0" radius="0.08" height="2" color="#F7F7F7"></a-cylinder><!-- PALO 2 atras -->
+        <a-box position="0 0.001 27"  rotation="0 0 0" width="5" height="4" depth="0.01" material="color: #F7F7F7; opacity: 0.3; transparent: true"></a-box> <!-- red -->
+        <a-box position="2.5 0.001 26"  rotation="0 90 0" width="2" height="4" depth="0.01" material="color: #F7F7F7; opacity: 0.3; transparent: true"></a-box> <!-- red -->
+        <a-box position="-2.5 0.001 26"  rotation="0 90 0" width="2" height="4" depth="0.01" material="color: #F7F7F7; opacity: 0.3; transparent: true"></a-box> <!-- red -->
+        <a-box position="0 2 26"  rotation="90 0 0" width="5" height="2" depth="0.01" material="color: #F7F7F7; opacity: 0.3; transparent: true"></a-box> <!-- red -->
+    </a-box>
+    <!-- Portería 2 -->
+    <a-cylinder position="-2.5 0 -25" radius="0.08" height="4" color="#F7F7F7"></a-cylinder> <!-- PALO 1 -->
+    <a-cylinder position="2.5 0 -25" radius="0.08" height="4" color="#F7F7F7"></a-cylinder><!-- PALO 2 -->
+    <a-cylinder position="0 2.04 -25" rotation="0 0 90" radius="0.08" height="5.2" color="#F7F7F7"></a-cylinder><!-- PALO arriba -->
+    <a-cylinder position="-2.5 0 -27" radius="0.08" height="4" color="#F7F7F7"></a-cylinder> <!-- PALO 1 atras -->
+    <a-cylinder position="2.5 0 -27" radius="0.08" height="4" color="#F7F7F7"></a-cylinder><!-- PALO 2 atras -->
+
+    <a-cylinder position="-2.5 2 -26" rotation="90 0 0" radius="0.08" height="2" color="#F7F7F7"></a-cylinder> <!-- PALO 1 atras -->
+    <a-cylinder position="2.5 2 -26" rotation="90 0  0" radius="0.08" height="2" color="#F7F7F7"></a-cylinder><!-- PALO 2 atras -->
+    <a-box position="0 0.001 -27"  rotation="0 0 0" width="5" height="4" depth="0.01" material="color: #F7F7F7; opacity: 0.3; transparent: true"></a-box> <!-- red -->
+    <a-box position="2.5 0.001 -26"  rotation="0 90 0" width="2" height="4" depth="0.01" material="color: #F7F7F7; opacity: 0.3; transparent: true"></a-box> <!-- red -->
+    <a-box position="-2.5 0.001 -26"  rotation="0 90 0" width="2" height="4" depth="0.01" material="color: #F7F7F7; opacity: 0.3; transparent: true"></a-box> <!-- red -->
+    <a-box position="0 2 -26"  rotation="90 0 0" width="5" height="2" depth="0.01" material="color: #F7F7F7; opacity: 0.3; transparent: true"></a-box> <!-- red -->
+</a-box>
+    <!-- lineas de area -->
+    <a-box position="7 0.001 22" rotation="0 90 0" width="6" height="0.01" depth="0.08" color="#F7F7F7"></a-box> <!-- línea lateral de area -->
+    <a-box position="-7 0.001 22" rotation="0 90 0" width="6" height="0.01" depth="0.08" color="#F7F7F7"></a-box> <!-- línea lateral de area -->
+    <a-box position=" 0 0.001 19" rotation="0 0 0" width="14" height="0.01" depth="0.08" color="#F7F7F7"></a-box> <!-- línea lateral de area -->
+    <!-- medio circulo de area -->
+    <a-box position=" 3 0.001 18.5" rotation="0 0 0" width="1" height="0.01" depth="1" color="#F7F7F7"></a-box>
+    <a-box position=" 2 0.001 17.5" rotation="0 0 0" width="1" height="0.01" depth="1" color="#F7F7F7"></a-box>
+    <a-box position=" 1 0.001 16.5" rotation="0 0 0" width="1" height="0.01" depth="1" color="#F7F7F7"></a-box>
+
+    <a-box position=" -3 0.001 18.5" rotation="0 0 0" width="1" height="0.01" depth="1" color="#F7F7F7"></a-box>
+    <a-box position=" -2 0.001 17.5" rotation="0 0 0" width="1" height="0.01" depth="1" color="#F7F7F7"></a-box>
+    <a-box position=" -1 0.001 16.5" rotation="0 0 0" width="1" height="0.01" depth="1" color="#F7F7F7"></a-box>
+    <a-box position=" 0 0.001 16.5" rotation="0 0 0" width="1" height="0.01" depth="1" color="#F7F7F7"></a-box>
+    <!--punto penal -->
+    <a-cylinder position="0 0.001 20 " radius="0.2" height="0.0" color="#F7F7F7"></a-cylinder>
+    <!-- lineas de area 2 -->
+    <a-box position="7 0.001 -22" rotation="0 90 0" width="6" height="0.01" depth="0.08" color="#F7F7F7"></a-box> <!-- línea lateral de area -->
+    <a-box position="-7 0.001 -22" rotation="0 90 0" width="6" height="0.01" depth="0.08" color="#F7F7F7"></a-box> <!-- línea lateral de area -->
+    <a-box position=" 0 0.001 -19" rotation="0 0 0" width="14" height="0.01" depth="0.08" color="#F7F7F7"></a-box> <!-- línea lateral de area -->
+    <!-- medio circulo de area -->
+    <a-box position=" 3 0.001 -18.5" rotation="0 0 0" width="1" height="0.01" depth="1" color="#F7F7F7"></a-box>
+    <a-box position=" 2 0.001 -17.5" rotation="0 0 0" width="1" height="0.01" depth="1" color="#F7F7F7"></a-box>
+    <a-box position=" 1 0.001 -16.5" rotation="0 0 0" width="1" height="0.01" depth="1" color="#F7F7F7"></a-box>
+
+    <a-box position=" -3 0.001 -18.5" rotation="0 0 0" width="1" height="0.01" depth="1" color="#F7F7F7"></a-box>
+    <a-box position=" -2 0.001 -17.5" rotation="0 0 0" width="1" height="0.01" depth="1" color="#F7F7F7"></a-box>
+    <a-box position=" -1 0.001 -16.5" rotation="0 0 0" width="1" height="0.01" depth="1" color="#F7F7F7"></a-box>
+    <a-box position=" 0 0.001 -16.5" rotation="0 0 0" width="1" height="0.01" depth="1" color="#F7F7F7"></a-box>
+    <!--punto penal -->
+    <a-cylinder position="0 0.001 -20 " radius="0.2" height="0.0" color="#F7F7F7"></a-cylinder>
+
+    <!--punto esquiana -->
+    <a-box position=" 12.5 0.001 25" rotation="0 0 0" width="0.5" height="0.01" depth="0.5" color="#F7F7F7"></a-box>
+    <a-box position=" -12.5 0.001 25" rotation="0 0 0" width="0.5" height="0.01" depth="0.5" color="#F7F7F7"></a-box>
+    <a-box position=" 12.5 0.001 -25" rotation="0 0 0" width="0.5" height="0.01" depth="0.5" color="#F7F7F7"></a-box>
+    <a-box position=" -12.5 0.001 -25" rotation="0 0 0" width="0.5" height="0.01" depth="0.5" color="#F7F7F7"></a-box> 
+</a-scene>
+ 
+</body>
+</html>
