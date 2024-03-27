@@ -127,3 +127,65 @@
 
 // Iniciar la animación de las piernas paralos jugadores
 animateLegsForPlayer();
+
+////////////////////// DARLE MOVIMIENTO AL BALON
+// Obtener el balon con su id 
+var balon = document.getElementById('ball');
+
+// Aqui se difinen las posiciones donde quiero que va a pasar el balon
+var posiciones = [
+  { x: 0, y: 0.6, z: 23, rotation: '0 0 0' },
+  { x: -3, y: 0.6, z: -1, rotation: '0 180 0' },
+  { x: 10, y: 0.6, z: -8, rotation: '0 90 0' },
+  { x: -10, y: 0.6, z: -8, rotation: '0 -90 0' },
+  { x: 0, y: 0.6, z: -8, rotation: '0 0 0' },
+  { x: -7, y: 0.6, z: -18, rotation: '0 90 0' },
+  { x: 7, y: 0.6, z: -18, rotation: '0 -90 0' },
+  { x: 0, y: 0.6, z: -23, rotation: '0 180 0' },
+  { x: -3, y: 0.6, z: 1, rotation: '0 0 0' },
+  { x: 10, y: 0.6, z: 8, rotation: '0 90 0' },
+  { x: -10, y: 0.6, z: 8, rotation: '0 -90 0' },
+  { x: 0, y: 0.6, z: 8, rotation: '0 180 0' },
+  { x: -7, y: 0.6, z: 18, rotation: '0 -90 0' },
+  { x: 7, y: 0.6, z: 18, rotation: '0 90 0' }
+];
+
+var indiceAct= 0; // indice opara controlar la posicion actual del balon
+var tiempointervalo= 4000; // permanecera durante 4s en cada posicion
+var duraciontransicion= 2000; // la duracion de trancicion entre posiscion y posicion es de  2 segundos
+
+// Ffuncion para mocver el balon entre posiciones y rotarlo
+function moverbalon() {
+  // se obtine la posición actual y la siguiente del balon
+  
+  var siguienteposicion = posiciones[(indiceAct + 1) % posiciones.length];
+
+  // actualizar la pocision y rotacion del balón 
+  balon.setAttribute('animation', {
+    property: 'position',
+    to: `${siguienteposicion.x} ${siguienteposicion.y} ${siguienteposicion.z}`,
+    dur: duraciontransicion,
+    easing: 'linear'
+  });
+
+  balon.setAttribute('animation__rotation', {
+    property: 'rotation',
+    to: siguienteposicion.rotation,
+    dur: duraciontransicion,
+    easing: 'linear'
+  });
+
+  // se incrementa  el indice para pasar a la siguiente posicion en el siguiente ciclo
+  indiceAct++;
+  // si se llega al final del arreglo  de posiciones, se reeinicia
+  if (indiceAct >=posiciones.length) {
+    indiceAct = 0;
+  }
+}
+
+// Llamar a la funcion para iniciar el desplazamiento
+moverbalon();
+
+// intervalo para llamar a la funcion
+var intervalId = setInterval(moverbalon, tiempointervalo);
+
