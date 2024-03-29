@@ -388,6 +388,26 @@
 </a-entity>
         <!-- Pelota -->
         <a-sphere id="ball" position="-3 0.6 1" radius="0.25" material="src: url(img/fut/balon.jpg);"></a-sphere>
+        <!-- cronometro -->
+
+        <a-box position="0 5 -29" rotation="90 0 0" width="5" height="0.3" depth="3" color="black"></a-box><!-- monitor -->
+        <a-box position="0 5 -28.8" rotation="90 0 0" width="4.5" height="0.1" depth="2" color="#0A0909"></a-box><!-- pantalla -->
+        <a-box position="0 2 -29" rotation="90 0 0" width="0.2" height="0.2" depth="4" color="black"></a-box>  <!-- palo reloj -->
+
+        <a-entity id="cronometro" position="-2 5 -28.7">
+          <a-text id="tiempo" value="00:00" color="red" scale="7 7 7"></a-text>
+      </a-entity>
+
+      <!-- cronometro2 -->
+
+      <a-box position="0 5 29" rotation="90 0 0" width="5" height="0.3" depth="3" color="black"></a-box><!-- monitor -->
+      <a-box position="0 5 28.8" rotation="90 0 0" width="4.5" height="0.1" depth="2" color="#0A0909"></a-box><!-- pantalla -->
+      <a-box position="0 2 29" rotation="90 0 0" width="0.2" height="0.2" depth="4" color="black"></a-box>  <!-- palo reloj -->
+
+      <a-entity id="cronometro2" position="2 5 28.7">
+        <a-text id="tiempo2" value="00:00" color="red" scale="7 7 7" side="double" rotation="0 180 0"></a-text>
+    </a-entity>
+
 </a-scene>
 
 <script src="js/funcionesfut.js"></script>
