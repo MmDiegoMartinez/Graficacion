@@ -189,3 +189,37 @@ moverbalon();
 // intervalo para llamar a la funcion
 var intervalId = setInterval(moverbalon, tiempointervalo);
 
+//PONER UN CRRONOMETRO QUE ME SIMULE QUE MIDA LA DURACION DEL PARTIDO
+// cachar elle elemto de texto para el cronometro
+var tiempoTexto = document.getElementById('tiempo');
+var tiempoTexto2 = document.getElementById('tiempo2');
+
+
+// variables para poder controlar el cronometro
+var segundos = 0;
+var minutos = 0;
+
+// Esta funcion para poder actualizar  el tiempo del cronometro
+function actualizarTiempo() {
+    segundos++;
+    if (segundos >= 60) {
+        segundos = 0;
+        minutos++;
+    }
+    var tiempoString = (minutos < 10 ? '0' + minutos : minutos) + ':' + (segundos < 10 ? '0' + segundos : segundos);
+    tiempoTexto.setAttribute('value', tiempoString);
+    tiempoTexto2.setAttribute('value', tiempoString);
+
+    // se detiene cuando llege a los 90 minutos que es lo que dura un partido
+    if (minutos === 90) {
+        clearInterval(intervaloCronometro);
+    }
+}
+
+// Intervalo para actualizar el tiempo cada segundo
+var intervaloCronometro = setInterval(actualizarTiempo, 800);
+
+// cuando se inicie la pagina 
+window.onload = function () {
+    actualizarTiempo(); // empieza el cronometro
+};
