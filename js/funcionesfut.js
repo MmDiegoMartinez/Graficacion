@@ -321,7 +321,7 @@ function animaraficion() {
 
   
   
-  // Moviendo la pierna izquierda hacia adelante del equipo 1
+  // Moviendo brazos a aficionados
   brazoizq.setAttribute('position', '14.5 1.8 -20.34');
   brazoizq.setAttribute('rotation', '0 0 0');
   brazoder.setAttribute('position', '14.5 1.8 -19.26');
@@ -439,12 +439,6 @@ function animaraficion() {
   hombroizq12.setAttribute('position', '16.5 3.2 24.34');
   hombroder12.setAttribute('position', '16.5 3.2 23.26');
 
-
-
-
-
-  
-  // Moviendo la pierna hacia la derecha después de 500ms
   setTimeout(function() {
     brazoizq.setAttribute('position', '14.5 2.3 -20.4');
     brazoizq.setAttribute('rotation', '135 0 0');
@@ -555,11 +549,44 @@ function animaraficion() {
     manoder12.setAttribute('position', '16.5 3.5 23');
     hombroizq12.setAttribute('position', '16.6 2.4 23.8');
     hombroder12.setAttribute('position', '16.6 2.4 23.8');
-    
-      
   }, 500);
   
   // Repetir la animación cada segundo
   setTimeout(animaraficion, 1000);
 }
 animaraficion();
+
+///////////////////////////////Apartado para patrocinadores
+//Animacion del anuncio 1
+document.getElementById('anuncio1').setAttribute('animation', {
+  property: 'position',
+  to: '-12.5 1.51 -27.5',
+  dur: 5000,
+  loop: true
+});
+
+
+// Animacion del anuncio 2
+document.getElementById('anuncio2').setAttribute('animation', {
+  property: 'position',
+  to: '11.5 1.51 -30',
+  dur: 5000,
+  loop: true
+});
+
+
+// Animacion del anuncio 3
+document.getElementById('anuncio3').setAttribute('animation', {
+  property: 'position',
+  to: '12.5 1.51 27.5',
+  dur: 5000,
+  loop: true
+});
+
+// Animacion del anuncio 4
+document.getElementById('anuncio4').setAttribute('animation', {
+  property: 'position',
+  to: '-11.5 1.51 30',
+  dur: 5000,
+  loop: true
+});
